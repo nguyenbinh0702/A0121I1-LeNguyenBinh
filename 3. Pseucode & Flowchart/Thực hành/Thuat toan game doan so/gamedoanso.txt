@@ -1,0 +1,8 @@
+begin
+ A là so ngau nhien tu 0-9
+ input M
+ if (A==M) 
+   display "dúng"
+ else 
+   display "sai"
+end
