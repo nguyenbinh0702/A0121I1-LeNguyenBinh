@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập: Tạo form đơn giản</title>
+</head>
+<body>
+<form method="post">
+    <div style="border:10px solid lightskyblue; width: 550px;">
+    <div style="width: 550px;"><h1 style="background-color: darkorange; color: white; text-align: center">SỞ THÍCH CỦA BẠN</h1></div>
+    <table>
+        <tr>
+            <td>Họ và tên</td>
+            <td><label><input type="text" name="fullname"></label></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><label><input type="email" name="mail"></label></td>
+        </tr>
+        <tr>
+            <td><label>Sở thích</label></td>
+           <td>
+              <label>
+                 <div>
+                     <input type="checkbox" name="hobby"> Thể thao
+                     <input type="checkbox" name="hobby"> Âm nhạc
+                     <input type="checkbox" name="hobby"> Đọc sách
+                     <br>
+                     <input type="checkbox" name="hobby"> Lướt web
+                     <input type="checkbox" name="hobby"> Chơi game
+                     <input type="checkbox" name="hobby"> Điện ảnh
+                     <br>
+                     <input type="checkbox" name="hobby"> Du lịch
+                 </div>
+              </label>
+           </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="submit" value="Gửi thông tin">
+                <input type="reset" name="reset" value="Nhập lại">
+            </td>
+        </tr>
+    </table>
+
+    </div>
+</form>
+</body>
+</html>
