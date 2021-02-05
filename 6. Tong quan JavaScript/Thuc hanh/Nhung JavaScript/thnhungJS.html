@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành: Nhúng Javascript</title>
+</head>
+<body>
+    <!-- Chèn JS vào trong thẻ <button> -->
+    <button type="button" onclick="alert('Xin chào!');">Click me!</button><br>
+    <!-- Sử dụng thẻ <script> và khai báo 1 hàm đơn giản -->
+    <button type="button" onclick="showMessage();">Click me!!</button>
+    <script>
+        function showMessage(){
+            alert('Xin chào');
+        }
+    </script>
+    <!-- Tạo file JS riêng và nhúng vào trang HTML -->
+    <script src="xinchao.js"></script>
+</body>
+</html>
