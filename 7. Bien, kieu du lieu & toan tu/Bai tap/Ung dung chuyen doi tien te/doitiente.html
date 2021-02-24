@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+   <table style="text-align: center"; cellpadding="8">
+       <tr>
+           <th>Amount</th>
+           <th>From Currency</th>
+           <th>To Currency</th>
+           <td></td>
+       </tr>
+       <tr>
+           <td>
+               <input type="text" id="money">
+           </td>
+           <td>
+               <select id="fromCurrency">
+                   <option name="VNĐ" value="VNĐ1">VietNam</option>
+                   <option name="USD" value="USD1">USD</option>
+                   <option name="EURO" value="EURO1">Euro</option>
+                   <option name="YEN" value="YEN1">Yên</option>
+               </select>
+           </td>
+           <td>
+               <select name="ToCurrency" id="toCurrency">
+                   <option name="USD1" value="USD">USD</option>
+                   <option name="VNĐ1" value="VNĐ">Vietnam</option>
+                   <option name="EURO1" value="EURO">Euro</option>
+                   <option name="YEN1" value="YEN">Yên</option>
+               </select>
+           </td>
+           <td>
+               <input type="button" onclick="result()" value="Convert">
+           </td>
+       </tr>
+   </table>
+</form>
+<p id="kqua"></p>
+<script>
+    function result() {
+        let amount = document.getElementById("money").value;
+        let FromCurrency = document.getElementById("fromCurrency").value;
+        let ToCurrency = document.getElementById("toCurrency").value;
+        if (FromCurrency=="VNĐ1" && ToCurrency=="USD") {
+            var result1 = parseFloat(amount/23000);
+        }
+        if (FromCurrency=="USD1" && ToCurrency=="VNĐ") {
+            var result1 = parseFloat(amount*23000);
+        }
+        if (FromCurrency=="VNĐ1" && ToCurrency=="EURO") {
+            var result1 = parseFloat(amount/27923);
+        }
+        if (FromCurrency=="EURO1" && ToCurrency=="VNĐ") {
+            var result1 = parseFloat(amount*27923);
+        }
+        if (FromCurrency=="YEN1" && ToCurrency=="VNĐ") {
+            var result1 = parseFloat(amount/220.72);
+        }
+        if (FromCurrency=="VNĐ1" && ToCurrency=="YEN") {
+            var result1 = parseFloat(amount*220.72);
+        }
+        if (FromCurrency=="USD1" && ToCurrency=="EURO") {
+            var result1 = parseFloat(amount/1.21704);
+        }
+        if (FromCurrency=="EURO1" && ToCurrency=="USD") {
+            var result1 = parseFloat(amount*1.21704);
+        }
+        document.getElementById("kqua").innerHTML = 'Result: ' + result1 + ToCurrency ;
+    }
+</script>
+</body>
+</html>
