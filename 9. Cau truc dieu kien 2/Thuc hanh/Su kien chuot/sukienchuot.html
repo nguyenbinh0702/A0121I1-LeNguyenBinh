@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành Sự kiện chuột</title>
+</head>
+<body>
+<form>
+    <img id="myImage" src="images.jpg">
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Click Me" onclick="moveRight();">
+</form>
+<script>
+    //biến imgOjb để lưu ảnh
+    let imgOjb = null;
+    imgOjb = document.getElementById("myImage");
+    //tạo hàm init() để khởi tạo imgOjb mà ta đã đặt vị trí và thuộc tính
+    function init() {
+        imgOjb =  document.getElementById('myImage');
+        imgOjb.style.position = 'relative';
+        imgOjb.style.left = '0px';
+    }
+    //tạo hàm moveRight() để tăng khoảng cách trái 10px
+    function moveRight() {
+        imgOjb.style.left = parseInt(imgOjb.style.left) + 10 + 'px';
+    }
+    //gọi hàm init() khi trình duyệt được tải lần đầu
+    window.onload = init;
+</script>
+</body>
+</html>

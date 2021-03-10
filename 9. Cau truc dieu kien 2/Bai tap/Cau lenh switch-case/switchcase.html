@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh Switch-case</title>
+</head>
+<body>
+<form>
+    <input type="text" id="ngay">
+    <input type="button" value="Tính số ngày" onclick="thang()">
+    <div id="result"></div>
+</form>
+<script>
+        function thang() {
+            let day = document.getElementById('ngay').value;
+            let result;
+            switch (day) {
+                case '1':
+                    result="Tháng 1 có 31 ngày";
+                    break;
+                case '3':
+                    result="Tháng 3 có 31 ngày";
+                    break;
+                case '5':
+                    result="Tháng 5 có 31 ngày";
+                    break;
+                case '7':
+                    result="Tháng 7 có 31 ngày";
+                    break;
+                case '8':
+                    result="Tháng 8 có 31 ngày";
+                    break;
+                case '10':
+                    result="Tháng 10 có 31 ngày";
+                    break;
+                case '12':
+                    result="Tháng 12 có 31 ngày";
+                    break;
+                case '2':
+                    result = "Tháng 2 có 28 hoặc 29 ngày";
+                    break;
+                default:
+                    result = "Tháng có 30 ngày";
+            }
+            document.getElementById("result").innerHTML= result;
+        }
+</script>
+</body>
+</html>
