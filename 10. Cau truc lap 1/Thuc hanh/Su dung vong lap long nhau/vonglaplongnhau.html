@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* //Vòng lặp for lồng nhau
+    let sout;
+    sout = "<table border='1 width='300' cellspacing='0' cellpadding='3'>";
+    for (i=1; i<=10; i++) {   //in ra số dòng. gồm 10 dòng
+        sout = sout + "<tr>";
+        for (j=1; j<=10; j++) {  //in ra giá trị từng cột trên mỗi dòng. Gồm 10 cột cho mỗi dòng
+            sout = sout + "<td>" + i*j + "<td/>"; //mỗi cột có giá trị i*j
+        }
+        sout = sout + "</tr>";
+    }
+    sout = sout + "</table>";
+    document.write(sout);*/
+
+    //vòng lặp while lồng nhau
+    let sout, i ,j;
+    sout = "<table border='1 width='300' cellspacing='0' cellpadding='3'>";
+    i = j = 1;
+    while (i<=10) {
+        sout = sout + "<tr>"; //số dòng
+        while (j<=10) { //giá trị của từng cột
+            sout = sout + "<td>" + i*j + "</td>";
+            j++;
+        }
+        sout = sout + "</tr>";
+        j=1;
+        i++;
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>
