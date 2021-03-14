@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    myColor = ["Red","Green","White","Black"];
+    document.write(myColor.join()+"<br/>");  //hàm join: ghép mảng
+
+    var num = prompt("Nhập số: ");
+    var str = num.toString(); //hàm toString: ép dữ liệu về dạng string
+    var result = [str[0]];
+    for (var x=1; x<str.length; x++) {
+        if ((str[x-1]%2===0)&&str[x]%2===0) {
+            result.push("-", str[x]);
+        } else {
+            result.push(str[x]);  //hàm push: thêm 1 phần tử mới vào phần cuối của mảng
+        }
+    }
+    document.write(result.join('') + "<br/>");
+
+    var str1 = prompt("Nhập chuỗi").toString();
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    var result1 = [];
+    for(var y=0; y<str.length; y++)
+    {
+        if(UPPER.indexOf(str1[y]) !== -1)  //indexOf: hàm lấy vị trí xuất hiện đầu tiên của string con trong string mẹ; tìm đc vị trí tính từ 0, k tìm thấy thì trả về -1
+        {
+            result1.push(str1[y].toLowerCase()); //hàm toLowerCase: đổi ký tự trong string thành ký tự thường
+        }
+        else if(LOWER.indexOf(str1[y]) !== -1)
+        {
+            result1.push(str1[y].toUpperCase()); //hàm toUpperCase: đổi ký tự trong string thành ký tự hoa
+        }
+        else
+        {
+            result1.push(str1[y]);
+        }
+    }
+    document.write(result1.join(''));
+</script>
+</body>
+</html>
