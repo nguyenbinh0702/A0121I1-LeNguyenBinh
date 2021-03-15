@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.write("<table border=1 width=40px>");
+    let i,j;
+    for(i=1;i<10;i++)
+    {
+        document.write("<tr>"); //dòng
+        for(j=2;j<10;j++) {
+            document.write("<td>" +j + "x" + i +"="+ (j*i));
+        }
+        document.write("</td>"); //cột
+        document.write("</tr>");
+    }
+    document.write("</tr></table>");
+    //vòng lặp của i làm viêc trước, ta có 1 dòng đầu tiên, sau đó vòng j làm việc, ta có giá trị cột đầu tiên j=2x1=2, sau đó j tăng lên 1, j=3x1=3 cứ vậy cho tới j=9x1=9; sau đó vòng i ngoài tăng lên 2, t có dòng thứ 2, ta có j=2x2=4, sau đó j tắng lên 1, j=3x2=6 cứ vậy tới 9x2=18, cứ như vậy làm hết bảng cửu chương
+</script>
+</body>
+</html>
