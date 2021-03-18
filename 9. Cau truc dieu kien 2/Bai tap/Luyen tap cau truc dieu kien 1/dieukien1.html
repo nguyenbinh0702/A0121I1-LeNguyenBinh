@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 1: Nhập vào 2 số a,b, kiểm tra a chia hết cho b k
+    let a = Number(prompt('Nhập số a: '));
+    let b = Number(prompt('Nhập số b: '));
+    if (a%b==0) {
+        document.write('a chia hết cho b');
+    }
+    else {
+        document.write('a không chia hết cho b');
+    }
+    //Bài 2: NHập tuổi, in ra kết quả nếu tuổi học sinh đó k đủ điều kiện vào học lớp 10
+    let tuoi = Number(prompt('Nhập số tuổi: '));
+    if (tuoi==15) {
+        document.write('Tuổi của bạn đủ điều kiện vào học lớp 10');
+    }
+    else {
+        document.write('Tuổi của bạn không đủ điều kiện vào học lớp 10');
+    }
+    //Bài 3: Nhập 1 số nguyên bất kỳ, in kết quả ra màn hình để nói cho ng dùng biết số đó lớn hay nhỏ hơn 0
+    let so = Number(prompt('Nhập số bất kỳ: '));
+    if (so>0) {
+        alert('Số bạn nhập lớn hơn 0');
+    }
+    else {
+        alert('Số bạn nhập nhỏ hơn 0')
+    }
+    //Bài 4: Nhập 3 số nguyên, tìm giá trị lớn nhất của 3 số nguyên đó
+    let a = Number(prompt("Nhập số thứ 1: "));
+    let b = Number(prompt("Nhập số thứ 2: "));
+    let c = Number(prompt("Nhập số thứ 3: "));
+    let max = a;
+    if (max < b) {
+        max = b;
+    }
+    if (c > max) {
+        max = c;
+    }
+    alert("Giá trị lớn nhất là: " + max);
+    //Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+    let diemKiemTra = Number(prompt("Nhập điểm bài kiểm tra: "));
+    let diemGiuaKy = Number(prompt("Nhập điểm bài giữa kỳ: "));
+    let diemCuoiKy = Number(prompt("Nhập điểm bài cuối kỳ: "));
+    let diemTrungBinh = (diemKiemTra + diemGiuaKy + diemCuoiKy)/3;
+    if (diemTrungBinh >= 9.0) {
+        alert("Học lực Giỏi");
+    } else if ((diemTrungBinh >= 7.0) && (diemTrungBinh < 9.0)) {
+        alert("Học lực Khá");
+    } else if ((diemTrungBinh >= 5.0) && (diemTrungBinh < 7.0)) {
+        alert("Học lực Trung Bình");
+    } else if (diemTrungBinh < 5.0) {
+        alert("Học lực Yếu");
+    } else alert("Không hợp lệ");
+    //Bài 7: Tính cước điẹn thoại cho 1 hộ gia đình với các thông số đã cho
+    let phi = 0;
+    let tong;
+    let phicodinh = 25;
+    let sophut = Number(prompt("Nhập số phút đã sử dụng: "));
+    if (sophut > 200) {
+        phi = (sophut - 200) *200 + 150*400 + 50*600;
+    } else if (sophut > 50) {
+        phi = (sophut - 50) *400 + 50*600;
+    } else {
+        phi = sophut*600;
+    }
+    tong = 0.01*phi + phicodinh;
+    alert("Bạn đã gọi " + sophut + " phút.");
+    alert("Số tiền phải nộp của bạn là: " + tong);
+</script>
+</body>
+</html>
