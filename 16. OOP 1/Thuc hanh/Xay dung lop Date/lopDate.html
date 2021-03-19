@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //xây dựng lớp MyDate, phương thức khởi tạo có 3 tham số truyền vào là day, month, year
+    let MyDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        //phương thức trả về ngày, tháng, năm
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        //phương thức thiết đặt lại giá trị các thuộc tính day, month, year
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+        this.toString1 = function () {
+            return this.day + '-' + this.month + '-' + this.year;
+        }
+        this.setDate = function () {
+            return this.day + '/' + this.month + '/' + this.year;
+        }
+    };
+    //Sử dụng lớp vừa tạo, tạo đối tượng date
+    let date = new MyDate(2, 2, 2007);
+    //truy cập phương thức của lớp date
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+    date.setDay(10);
+    date.setMonth(10);
+    date.setYear(2019);
+    alert(date.getDay() + "/" + date.getMonth() + "/" + date.getYear());
+   alert(date.toString1());
+   alert(date.setDate());
+</script>
+</body>
+</html>
