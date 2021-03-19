@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h3>Bài 2: Tính chu vi - diện tích hình tròn</h3>
+        <p>Nhập bán kính hình tròn: <input type="number"  id="bankinh" placeholder="Bán kính hình tròn" value="0" onkeyup="tinhChuViDienTich()"/></p>
+        <p>Chu vi hình tròn là: <span  id="chuvi">0</span></p>
+        <p >Diện tích hình tròn là: <span  id="dientich">0</span></p>
+    </div>
+    <p id="bai3">Bài 3: </p>
+<script>
+    //Bài 1: Tính bình phương của 1 số bất kỳ
+    /*let square = 1;
+    function caclSquare(num) {
+        square = num*num;
+        return square;
+    }
+    let number = Number(prompt("Enter your number: "));
+    caclSquare(number);
+    document.write("Bài 1: Bình phương số vừa nhập là: " + square);
+    //Bài 2: Tính chu vi, diện tích hình tròn
+    function tinhChuViDienTich() {
+        var r = document.getElementById("bankinh").value;
+        var chuViHinhTron = 2 * 3.14 * r;
+        document.getElementById("chuvi").innerText = chuViHinhTron;
+        var dienTichHinhTron = 3.14 * r * r;
+        document.getElementById("dientich").innerText = dienTichHinhTron;
+    }
+    //Bài 3: Tính giai thừa của 1 số nguyên bất kỳ
+    var n = prompt('Nhap gia tri cua N');
+    var gt=1;
+    function giaithua(n) {
+        for(var i=1;i<=n;i++)
+        {
+            gt *= i;
+        }
+        document.getElementById("bai3").innerHTML = "Giai thừa của số bạn vừa nhập là: " + gt;
+    }
+    var n = giaithua(n);
+    //Bài 4: Kiểm tra ký tự nhập vào có phải là ký tự số k, nếu là số trả về true, ngược lại trả về false
+    var n = prompt("Mời bạn nhập vào 1 ký tự bất kỳ: ");
+    function kiemTraKyTu(n) {
+        if (isNaN(n)==true) {  //hàm isNaN: kiểm tra kiểu dữ liệu của 1 biến có phải là số hay k, nếu k phải là số thì trả về true, ngược lại trả về false
+            return false;
+        } else {
+            return true;
+        }
+    }
+    alert(kiemTraKyTu(n));
+    //Bài 5: Nhận 3 số nguyên bất kỳ, trả về giá trị nhỏ nhất
+    var a = Number(prompt("Nhập vào số thứ 1: "));
+    var b = Number(prompt("Nhập vào số thứ 2: "));
+    var c = Number(prompt("Nhập vào số thứ 3: "));
+    function findMin(a,b,c) {
+        var min=a;
+        if (b<min) {
+            min=b;
+        } else if (c<min) {
+            min=c;
+        }
+        return min;
+    }
+    alert(findMin(a,b,c));
+    //Bài 6: Kiểm tra 1 số có phải là nguyên dương k, đúng thì trả về true, sai thì trả về false
+    var number = Number(prompt("Nhập vào 1 số bất kỳ: "));
+    function checkNumber(number) {
+        if (number>=0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    alert(checkNumber(number));
+    //Bài 7: Truyền vào 2 số bất kỳ, sau đó đổi chỗ 2 số nguyên đó
+    var a = prompt("Nhập vào a: ");
+    var b = prompt("Nhập vào b: ");
+    function swapNumber(a,b) {
+        var doiSo = a;
+        a = b;
+        b = doiSo;
+        document.write("Số a sau khi đổi chỗ là: " + a + "<br/>");
+        document.write("Số b sau khi đổi chỗ là: " + b);
+    }
+    swapNumber(a,b);*/
+    //Bài 8: truyền vào mảng bất kỳ, đảo ngược mảng số nguyên đó
+    var arr = new Array();
+    function daoNguoc(arr) {
+        var n = Number(prompt("Nhập số phần tử: "));
+        for (let i=0; i<n; i++) {
+            arr[i] = prompt("Nhập phần tử thứ " + i);
+        }
+        let v=[];
+        for (let i=arr.length-1; i>=0; i--) {
+            v.push(arr[i]);
+        }
+        alert(v);
+    }
+    daoNguoc(arr);
+    //Bài 9: Truyền vào 1 mảng và 1 ký tự bất kỳ, kiểm tra ký tự đó có nằm trong mảng k, nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1
+    var array = new Array();
+    var x;
+    function checkArray(array) {
+        var n = Number(prompt("Nhập số phần tử: "));
+        for (let i=0; i<n; i++) {
+            array[i] = prompt("Nhập phần tử thứ " + i);
+        }
+        for (let i=0; i<=array.length; i++) {
+            if ()
+        }
+    }
+</script>
+</body>
+</html>
