@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <p>Game đoán số</p>
+   <input type="button" value="chơi" onclick="play()"/>
+<script>
+    //Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100.
+    // Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành
+    for (var i=1 ; i<=100;i++){
+         if (i==99) {
+             document.write(i+'<br>');
+             alert("Đã hoàn thành");}
+         else {
+            document.write(i+'<br>');
+         }
+    }
+    //Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi
+    // người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ.
+    // Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ
+     let nhietDo = Number(prompt("Nhập nhiệt độ hiện tại: "));
+    while (nhietDo>100 || nhietDo<20) {
+        if (nhietDo>100) {
+            alert("Yêu cầu người dùng giảm nhiệt độ");
+        } else if (nhietDo<20) {
+            alert("Yêu cầu người dùng tăng nhiệt độ");
+        }
+    }
+    //Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+    var fist_number = 1, second_number = 1, temp;
+    for (var i = 0; i < 20; i++) {
+        if (i <= 1) {
+            temp = 1;
+        } else {
+            temp = fist_number + second_number;
+            fist_number = second_number;
+            second_number = temp;
+        }
+        document.write(temp + " ");
+        console.log(temp + " ");
+    }
+    //Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+    var i;
+    var first_number=1;
+    var second_number=1;
+    var temp=0;
+    for (i=0;i<20;i++) {
+        if (i<=1) {
+            temp=1;
+        } else {
+            temp=first_number+second_number;
+            first_number=second_number;
+            second_number=temp;
+        }
+        if (temp%5==0) {
+            document.write(temp +" là số chia hết cho 5 đầu tiên");
+            break;
+        }
+    }
+    //Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+    var i, temp=0, first_number = 1, second = 1, sum = 0;
+    for (i = 0; i < 20; i++) {
+        if (i <= 1) {
+            temp = 1;
+        } else {
+            temp = first_number + second;
+            first_number = second;
+            second = temp;
+        }
+        sum +=temp ;
+    }
+    document.write(sum);
+    //Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong dãy fibonacci.
+    var i = 0, sum=0, dem=0;
+    var first_number = 1;
+    var second_number = 1;
+    var temp = 0;
+    while (i >=0 && dem<30) {
+        if (i <= 1) {
+            temp = 1;
+        } else {
+            temp = first_number + second_number;
+            first_number = second_number;
+            second_number = temp;
+        }
+        if (temp % 7 == 0) {
+            sum += temp;
+            dem++;
+        }
+        i++;
+    }
+    document.write(sum);
+    //Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết
+    // cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia
+    // hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+     for (var i = 1; i <= 100; i++) {
+         if ((i % 3 == 0) && (i % 5 == 0)) {
+             document.write('FizzBuzz' + '<br/>');
+         } else if (i % 3 == 0) {
+             document.write('Fizz' + '<br/>');
+         } else if (i % 5 == 0) {
+             document.write('Buzz' + '<br/>');
+         } else {
+             document.write(i + '<br/>');
+         }
+     }
+    //Bài 8: Game đoán số
+    function play(){
+        var min = Number(prompt("Khoảng random từ :"));
+        var max = Number(prompt("Khoảng random đến"));
+        var random = Math.floor(Math.random() * (max - min) ) + min;
+        var i=1, dem=0;
+        while(i>0 && dem<1){
+            var doanso = Number(prompt("bạn đoán số mấy"));
+            if (doanso > random) {
+                alert("lớn");
+            } else if(doanso < random) {
+                alert("nhỏ")
+            } else {
+                alert("Chúc mừng");
+                dem++;
+            }
+            i++;
+        }
+    }
+</script>
+</body>
+</html>

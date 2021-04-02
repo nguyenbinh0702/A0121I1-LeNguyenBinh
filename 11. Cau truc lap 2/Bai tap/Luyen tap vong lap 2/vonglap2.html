@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 1: In dãy Fibonacci
+    var fist_number = 1, second_number = 1, temp;
+    for (var i = 0; i < 20; i++) {
+        if (i <= 1) {
+            temp = 1;
+        } else {
+            temp = fist_number + second_number;
+            fist_number = second_number;
+            second_number = temp;
+        }
+        document.write(temp + " ");
+        console.log(temp + " ");
+    }
+    //Bài 2: Tính giai thừa của 1 số nguyên dương
+    var n = parseInt(prompt('Nhap gia tri cua N: '));
+    if (n<0) {
+        alert("N phải là số nguyên dương!");
+    }
+    var gt=1;
+    for(var i=1;i<=n;i++) {
+           gt *= i;
+    }
+    alert("Giai thừa của số bạn vừa nhập là: " + gt);
+    //Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau
+    for (var i=1; i<=5; i++) {
+        for (var j=1; j<=i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+    for (var i=5; i>=1; i--) {
+        for (var j=1; j<=i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+    for (var i=1; i<=5; i++) {
+        for (var k=1; k<5+1-i; k++) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (var j=1; j<=i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+    for (var i=5; i>=1; i--) {
+        for (var k=5-i; k>=1; k--) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (var j=1; j<=i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    //Bài 4: In hình chữ nhật
+    for (var i=0; i<7; i++) {
+        for (var j=0; j<7; j++) {
+            if (i === 0 || i === 6 || j === 0 || j === 6) {
+                document.write("*");
+            } else {
+                document.write("&nbsp;&nbsp;")
+            }
+        }
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>
